@@ -1,3 +1,14 @@
-.wrapper {
+.title {
+    text-align: center;
+    margin-top: 15px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-seri
+}
+
+.wrapperProduct {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    margin-top: 10px;
+
     
 }
