@@ -1,0 +1,27 @@
+.product {
+    border: 1px solid black;
+    width: 184px;
+    margin: 5px 10px;
+
+    h5 {
+        text-align: center;
+    }
+
+    .productImg {
+        width: 100%;
+    }
+
+    .iconLike {
+        cursor: pointer;
+        position: absolute;
+        margin-left: 8px;
+        width: 20px;
+    }
+
+    .iconPlus {
+        cursor: pointer;
+        position: absolute;
+        margin-left: 135px;
+        width: 20px;
+    }
+}

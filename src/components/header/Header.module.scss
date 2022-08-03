@@ -1,0 +1,27 @@
+.wrapper {
+    border: 1px solid black;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+
+    .search {
+        input {
+            margin-left: 50px;
+            width: 70%;
+            height: 100%;
+        }
+    
+        img {
+            position: absolute;
+        }
+    }
+
+    .logo {
+        margin-right: 180px;
+    }
+
+    .cart {
+        margin-right: 10px;
+        cursor: pointer;
+    }
+}
