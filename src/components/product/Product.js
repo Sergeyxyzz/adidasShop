@@ -1,19 +1,21 @@
 import { useState } from 'react'
 import styles from './Product.module.scss'
 
-const Product = ({image, price, description}) => {
-    const [like, setLike] = useState(false)
+const Product = ({image, price, description, onPlus}) => {
+    const [like, setLike] = useState(false) // блок кода лайк и снять лайк
     const onLike = () => {
         setLike(!like)
     }
 
-    const [addToCart, setAddToCart] = useState(false)
+    const [cartOpened, setCartOpened] = useState(false) // блок смены значка на добавление товара и добавление товара в корзину
     const onAddToCart = () => {
-        setAddToCart(!addToCart)
+        onPlus({price, image, description})
+        setCartOpened(!cartOpened)
     }
 
     return (<>
         <div className={styles.wrapper}>
+
         <div className={styles.product}>
             <div>
                 <img onClick={onLike} src={like ? 'images/liked.png' : 'images/unliked.png'} alt="like" className={styles.iconLike}/>
@@ -21,7 +23,7 @@ const Product = ({image, price, description}) => {
             </div>
             <img src={image} alt="Футболка" className={styles.productImg} />
             <div>
-                <img onClick={onAddToCart} src={addToCart ? 'images/added.png' : 'images/plus.png'} alt="" className={styles.iconPlus}/>
+                <img onClick={onAddToCart} src={cartOpened ? 'images/added.png' : 'images/plus.png'} alt="" className={styles.iconPlus}/>
                 <h5>{price}</h5>
             </div>
         </div>

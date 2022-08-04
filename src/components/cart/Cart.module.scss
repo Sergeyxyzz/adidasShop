@@ -1,5 +1,4 @@
 .cartWrapper {
-    display: none;
     position: absolute;
     width: 1024px;
     height: 100vh;
@@ -9,7 +8,25 @@
     .items {
         background-color: aliceblue;
         height: 100%;
-        margin-left: 600px;
+        margin-left: 800px;
+
+        .item {
+            h3, h4 {
+                text-align: center;
+            }
+        }
+
+        .image {
+            width: 100%;
+            height: 150px;
+        }
+
+        .removeImg {
+            cursor: pointer;
+            margin-left: 43%;
+            margin-top: 5px;
+            width: 35px;
+        }
     }
 
     .closeImg {

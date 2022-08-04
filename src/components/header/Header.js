@@ -1,6 +1,6 @@
 import styles from './Header.module.scss'
 
-const Header = () => {
+const Header = (props) => {
     return (<div className={styles.wrapper}>
             <div className={styles.search}>
                 <img src="images/search.png" alt="search" width={50} />
@@ -10,7 +10,7 @@ const Header = () => {
                 <img src="images/adidas_logo.png" alt="Adidas logo" height={'45'} />
             </div>
             <div className={styles.cart}>
-                <img src="images/cart.png" alt="Cart" width={45} />
+                <img onClick={props.onCart} src="images/cart.png" alt="Cart" width={45} />
             </div>
     </div>)
 }
