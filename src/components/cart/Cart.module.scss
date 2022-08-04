@@ -1,0 +1,21 @@
+.cartWrapper {
+    display: none;
+    position: absolute;
+    width: 1024px;
+    height: 100vh;
+    background: rgba(95, 95, 95, 0.9);
+    z-index: 1;
+
+    .items {
+        background-color: aliceblue;
+        height: 100%;
+        margin-left: 600px;
+    }
+
+    .closeImg {
+        cursor: pointer;
+        margin: 50px;
+        position: absolute;
+        width: 50px;
+    }
+}
