@@ -1,9 +1,11 @@
 import { useState } from 'react'
 import styles from './Product.module.scss'
 
-const Product = ({image, price, description, onPlus}) => {
+const Product = ({image, price, description, onPlus, onPlusFavorite}) => {
+
     const [like, setLike] = useState(false) // блок кода лайк и снять лайк
     const onLike = () => {
+        onPlusFavorite({price, image, description})
         setLike(!like)
     }
 
@@ -14,9 +16,9 @@ const Product = ({image, price, description, onPlus}) => {
     }
 
     return (<>
-        <div className={styles.wrapper}>
-
-        <div className={styles.product}>
+            <div className={styles.wrapper}>
+            <div className={styles.wrapperProduct}>
+            <div className={styles.product}>
             <div>
                 <img onClick={onLike} src={like ? 'images/liked.png' : 'images/unliked.png'} alt="like" className={styles.iconLike}/>
                 <h5>{description}</h5>
@@ -28,6 +30,7 @@ const Product = ({image, price, description, onPlus}) => {
             </div>
         </div>
 
+    </div>
     </div>
     </>)
 }

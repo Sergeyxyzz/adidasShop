@@ -4,8 +4,7 @@ const Cart = ({closeCart, onRemoveItem, items=[]}) => {
     return (<div className={styles.cartWrapper}>
         <img onClick={closeCart} src="images/close.png" alt="close" className={styles.closeImg}/>
         <div className={styles.items}>
-            {items.map((obj, i) => (<div className={styles.item}>
-                {obj.i}
+            {items.map((obj) => (<div className={styles.item}>
                 <img className={styles.image} src={obj.image} alt="Футболка" />
                 <h4>{obj.description}</h4>
                 <h3>{obj.price} руб.</h3>
